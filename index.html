@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+ <header>
+    <h1 class="profile_name">Ilyass Samak</h1>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#recommendations">Recommendations</a>
+    </nav>
+</header>
+
+<section id="about">
+    <img src="profile.jpg" width="250" id="profile-pic" alt="Profile picture">
+
+    <div>
+        <label for="upload-photo">Change photo:</label>
+        <input type="file" id="upload-photo" accept="image/*">
+    </div>
+
+    <h2>ilyass samak</h2>
+
+    <p>
+        I am a web development student passionate about HTML, CSS,
+        JavaScript, and Arduino projects.
+    </p>
+</section>
+
+<section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skill">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" width="80">
+        <h3>HTML</h3>
+    </div>
+
+    <div class="skill">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="80">
+        <h3>CSS</h3>
+    </div>
+
+    <div class="skill">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" width="80">
+        <h3>JavaScript</h3>
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Arduino Smart Safe</h3>
+        <p>Created a smart safe system using Arduino sensors.</p>
+    </div>
+
+    <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>Developed a responsive personal portfolio website.</p>
+    </div>
+
+    <div class="project">
+        <h3>Weather App</h3>
+        <p>Built a weather forecast app using JavaScript.</p>
+    </div>
+
+</section>
+
+<section id="recommendations">
+
+    <h2>Recommendations</h2>
+
+    <div id="all_recommendations">
+
+        <div class="recommendation">
+            Excellent web development skills.
+        </div>
+
+        <div class="recommendation">
+            Very creative and hardworking.
+        </div>
+
+        <div class="recommendation">
+            Strong teamwork and communication.
+        </div>
+
+    </div>
+
+    <textarea id="new_recommendation" placeholder="Write a recommendation"></textarea>
+
+    <button id="submit-recommendation" onclick="addRecommendation()">
+        Submit Recommendation
+    </button>
+
+</section>
+
+<script src="script.js"></script>
+
+    <!-- Floating Home icon -->
+    <a href="#top" class="home_icon" aria-label="Home">🏠</a>
+
+    <!-- Confirmation popup (hidden by default) -->
+    <div id="confirm-popup" class="confirm-popup" aria-live="polite" role="status" hidden>
+        <img src="popup.png" alt="popup visual" class="popup-image">
+        <div class="popup-text">Thank you for leaving a recommendation!</div>
+    </div>
+
+</body>
+</html>

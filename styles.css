@@ -1,0 +1,134 @@
+/* Basic profile image styles */
+#about {
+    text-align: center;
+}
+#profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 12px auto;
+    border: 3px solid #ddd;
+}
+.profile-controls {
+    margin-bottom: 8px;
+}
+.hint {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@media (max-width: 480px) {
+    #profile-pic { width: 140px; height: 140px; }
+}
+body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: purple;
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile_name{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav a{
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+
+section{
+    padding: 40px;
+}
+
+.skill{
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.project{
+    border: 1px solid gray;
+    padding: 20px;
+    margin: 20px;
+}
+
+.recommendation{
+    border: 1px solid black;
+    padding: 15px;
+    margin: 10px;
+}
+
+textarea{
+    width: 300px;
+    height: 100px;
+}
+
+button{
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.home_icon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+    background: purple;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    line-height: 1;
+    padding: 0; /* use fixed size */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Confirmation popup styles */
+.confirm-popup{
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.98);
+    color: #222;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 200ms ease, transform 200ms ease;
+}
+.confirm-popup--visible{ opacity: 1; transform: translateX(-50%) translateY(0); }
+.confirm-popup .popup-image{ width: 48px; height: 48px; }
+.confirm-popup .popup-text{ font-weight: 600; }
